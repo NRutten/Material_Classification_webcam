@@ -1,6 +1,6 @@
 # Webcam texture analsysis
 
-Niek Rutten,
+by Niek Rutten,
 
 Adapted repository from:
 
@@ -22,84 +22,4 @@ This code uses python, pytorch, and barbar.
 Please use [[`Pytorch's website`](https://pytorch.org/get-started/locally/)] to download necessary packages.
 Barbar is used to show the progress of model. Please follow the instructions [[`here`](https://github.com/yusugomori/barbar)]
 to download the module.
-
-
-## Main Functions
-
-The histogram layer model (HistRes_B) runs using the following functions. 
-
-1. Intialize model  
-
-```model, input_size = intialize_model(**Parameters)```
-
-2. Prepare dataset(s) for model
-
- ```dataloaders_dict = Prepare_Dataloaders(**Parameters)```
-
-3. Train model 
-
-```train_dict = train_model(**Parameters)```
-
-4. Test model
-
-```test_dict = test_model(**Parameters)```
-
-
-## Parameters
-The parameters can be set in the following script:
-
-```Demo_Parameters.py```
-
-## Inventory
-
-```
-https://github.com/GatorSense/Histogram_Layer
-
-└── root dir
-    ├── demo.py   //Run this. Main demo file.
-    ├── Demo_Parameters.py // Parameters file for demo.
-    ├── Prepare_Data.py  // Load data for demo file.
-    ├── Prepare_Data_Results.py // Load data for results file.
-    ├── Texture_Information.py // Class names and directories for datasets.
-    ├── View_Results.py // Run this after demo to view saved results.
-    ├── papers  // Links to related publications.
-    └── Utils  //utility functions
-        ├── Compute_FDR.py  // Compute Fisher Discriminant Ratio for features.
-        ├── Confusion_mats.py  // Generate confusion matrices.
-        ├── Generate_TSNE_visual.py  // Generate TSNE visualization for features.
-        ├── Histogram_Model.py  // Generate HistRes_B models.
-        ├── Network_functions.py  // Contains functions to initialize, train, and test model. 
-        ├── RBFHistogramPooling.py  // Create histogram layer. 
-        ├── Save_Results.py  // Save results from demo script.
-     
-```
-
-## License
-
-This source code is licensed under the license found in the [`LICENSE`](LICENSE) file in the root directory of this source tree.
-
-This product is Copyright (c) 2020 J. Peeples, W. Xu, and A. Zare. All rights reserved.
-
-## <a name="CitingHist"></a>Citing Histogram Layer
-
-If you use the histogram layer code, please cite the following reference using the following entry.
-
-**Plain Text:**
-
-Peeples, J., Xu, W., & Zare, A. (2021). "Histogram Layers for Texture Analysis," 
-in IEEE Transactions on Artificial Intelligence, DOI 10.1109/TAI.2021.3135804.
-
-**BibTex:**
-```
-@Article{Peeples2021Histogram,
-Title = {Histogram Layers for Texture Analysis},
-Author = {Peeples, Joshua and Xu, Weihuang  and Zare, Alina},
-Journal = {IEEE Transactions on Artificial Intelligence},
-Volume = {},
-Year = {2021},
-number={}
-pages={1-1}
-doi={10.1109/TAI.2021.3135804}
-}
-```
 
